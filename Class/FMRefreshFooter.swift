@@ -9,7 +9,7 @@
 import UIKit
 
 struct FMRefreshFooterStyle {
-    var autoBack: Bool = true
+    var autoBack: Bool = false
 }
 
 class FMRefreshFooter: FMRefresh {
@@ -17,6 +17,10 @@ class FMRefreshFooter: FMRefresh {
     var originContentHeight: CGFloat = 0;
     
     override func newContentOffset(newOffset: CGPoint) -> Void {
+        if self.state == .noMore { // 没有更多数据了
+            return;
+        }
+        
         if self.state == .refreshing { // 任何一个正在刷新  都不能进行重置状态
             return;
         }
@@ -65,8 +69,17 @@ class FMRefreshFooter: FMRefresh {
             self.target!.setContentOffset(CGPoint(x: 0, y: offsetY), animated: false)
         }) { (finish) in
             self.target!.contentInset = originInset;
-            self.state = .normal
+            if (self.state != .noMore){
+                self.state = .normal
+            }
         }
     }
+    
+    func noMore() -> Void {
+        self.state = .noMore
+    }
 
+    func reSetNoMore() -> Void {
+        self.state = .normal
+    }
 }

@@ -140,6 +140,11 @@ extension FMRefresh {
 
 extension FMRefresh {
     
+    func refresh(_ action: @escaping () -> ()) -> FMRefresh {
+        self.refreshAction = action
+        return self
+    }
+    
     func newContentSize(newSize: CGSize) -> Void {
         self.setUpFrame()
     }
@@ -177,13 +182,13 @@ extension FMRefresh {
     func showText() -> String {
         switch self.state {
         case .noMore:
-            return "没有更多数据了"
+            return "没东西了, 别扯!"
         case .normal:
             return self.type == .header ? "下拉刷新" : "上拉刷新"
         case .refreshing:
             return "正在刷新ing...."
         case .willRefresh:
-            return "松手即可刷新"
+            return "释放即可刷新"
         case .willEndRefresh:
             return "即将结束刷新"
         }

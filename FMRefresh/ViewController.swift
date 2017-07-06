@@ -31,10 +31,15 @@ class ViewController: UIViewController {
                     self?.tableView.reloadData()
                 }
                 self?.tableView.fm_footer?.endRefresh()
+                self?.tableView.fm_footer?.noMore()
+                
+                DispatchQueue.main.asyncAfter(deadline: delay+DispatchTimeInterval.seconds(10), execute: {
+                    self?.tableView.fm_footer?.reSetNoMore()
+                })
             })
         })
         
-        self.tableView.fm_header = FMRefreshHeader(refreshAction: { [weak self] in
+        self.tableView.fm_header = FMRefreshCustom(refreshAction: { [weak self] in
             let delay = DispatchTime.now() + DispatchTimeInterval.seconds(2)
             DispatchQueue.main.asyncAfter(deadline: delay, execute: {
                 self?.tableView.fm_header?.endRefresh()
@@ -46,7 +51,7 @@ class ViewController: UIViewController {
     lazy var items: [String] = {
         return [String]()
     }()
-    
+
 }
 
 

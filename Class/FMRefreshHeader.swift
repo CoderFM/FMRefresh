@@ -10,8 +10,6 @@ import UIKit
 
 class FMRefreshHeader: FMRefresh {
     
-  
-    
     override func newContentOffset(newOffset: CGPoint) -> Void {
         
         if self.state == .refreshing { // 任何一个正在刷新  都不能进行重置状态
@@ -28,6 +26,7 @@ class FMRefreshHeader: FMRefresh {
             } else { // 完全显示出来了
                 if target!.isDragging { //拖拽中  即将进入刷新状态
                     self.state = .willRefresh
+                    self.pullWillRefresh()
                 } else { // 松手了 正在刷新中
                     self.state = .refreshing
                     self.willRefresh()
@@ -61,6 +60,10 @@ class FMRefreshHeader: FMRefresh {
             self.target!.contentInset = originInset;
             self.state = .normal
         }
+    }
+    
+    func pullWillRefresh() -> Void {
+        
     }
     
 }

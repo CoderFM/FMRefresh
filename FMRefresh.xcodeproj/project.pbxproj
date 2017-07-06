@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15BCA98A1F0E12880052D79A /* FMCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BCA9881F0E12880052D79A /* FMCircleView.swift */; };
+		15BCA98B1F0E12880052D79A /* FMRefreshCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BCA9891F0E12880052D79A /* FMRefreshCustom.swift */; };
 		15CD103B1F0C85A200A03C3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CD103A1F0C85A200A03C3A /* AppDelegate.swift */; };
 		15CD103D1F0C85A200A03C3A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CD103C1F0C85A200A03C3A /* ViewController.swift */; };
 		15CD10401F0C85A200A03C3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15CD103E1F0C85A200A03C3A /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15BCA9881F0E12880052D79A /* FMCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMCircleView.swift; sourceTree = "<group>"; };
+		15BCA9891F0E12880052D79A /* FMRefreshCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMRefreshCustom.swift; sourceTree = "<group>"; };
 		15CD10371F0C85A200A03C3A /* FMRefresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FMRefresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15CD103A1F0C85A200A03C3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15CD103C1F0C85A200A03C3A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +69,8 @@
 				15CD10541F0CEFE600A03C3A /* Class */,
 				15CD103A1F0C85A200A03C3A /* AppDelegate.swift */,
 				15CD103C1F0C85A200A03C3A /* ViewController.swift */,
+				15BCA9881F0E12880052D79A /* FMCircleView.swift */,
+				15BCA9891F0E12880052D79A /* FMRefreshCustom.swift */,
 				15CD103E1F0C85A200A03C3A /* Main.storyboard */,
 				15CD10411F0C85A200A03C3A /* Assets.xcassets */,
 				15CD10431F0C85A200A03C3A /* LaunchScreen.storyboard */,
@@ -157,10 +163,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15BCA98A1F0E12880052D79A /* FMCircleView.swift in Sources */,
 				15CD105B1F0CEFE600A03C3A /* FMRefreshHeader.swift in Sources */,
 				15CD105C1F0CEFE600A03C3A /* UIScrollView+Extension.swift in Sources */,
 				15CD103D1F0C85A200A03C3A /* ViewController.swift in Sources */,
 				15CD105A1F0CEFE600A03C3A /* FMRefreshFooter.swift in Sources */,
+				15BCA98B1F0E12880052D79A /* FMRefreshCustom.swift in Sources */,
 				15CD10591F0CEFE600A03C3A /* FMRefresh.swift in Sources */,
 				15CD103B1F0C85A200A03C3A /* AppDelegate.swift in Sources */,
 			);
@@ -326,6 +334,7 @@
 				15CD104B1F0C85A200A03C3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
